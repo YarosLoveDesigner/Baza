@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="{% static 'css.css' %}" rel="stylesheet" >
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table>
+    <thead>
+    <tr>
+        <td>Имя</td>
+        <td>Фамилия</td>
+        
+    </tr>
+    </thead>
+    <tbody>
+
+    {%  for row in data %}
+        <tr>
+        <td>{{ row.0}}</td>
+        <td>{{ row.1}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+
+    </table>
+</body>
+</html>
